@@ -1,6 +1,7 @@
 'use client'
 
 import { Star } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function Testimonials() {
   const testimonials = [
@@ -40,15 +41,27 @@ export default function Testimonials() {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-8 bg-background rounded-2xl border border-border hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 duration-700"
-              style={{ animationDelay: `${index * 100}ms` }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -4, boxShadow: '0 20px 25px -5rgba(0, 0, 0, 0.1)' }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="p-8 bg-background rounded-2xl border border-border transition-all duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + i * 0.05 }}
+                  >
+                    <Star className="w-5 h-5 fill-primary text-primary" />
+                  </motion.div>
                 ))}
               </div>
 
@@ -66,7 +79,7 @@ export default function Testimonials() {
                   {testimonial.role}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

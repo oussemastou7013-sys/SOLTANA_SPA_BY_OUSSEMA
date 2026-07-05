@@ -1,6 +1,7 @@
 'use client'
 
 import { Sparkles, Award, Users, Heart } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function WhyChooseUs() {
   const reasons = [
@@ -44,10 +45,14 @@ export default function WhyChooseUs() {
           {reasons.map((reason, index) => {
             const Icon = reason.icon
             return (
-              <div
+              <motion.div
                 key={index}
-                className="group p-8 bg-card rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-8 duration-700"
-                style={{ animationDelay: `${index * 100}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, boxShadow: '0 25px 30px -5rgba(0, 0, 0, 0.12)' }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group p-8 bg-card rounded-2xl transition-all duration-300"
               >
                 <div className="mb-4 inline-flex p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                   <Icon className="w-6 h-6 text-primary" />
@@ -58,7 +63,7 @@ export default function WhyChooseUs() {
                 <p className="text-muted-foreground font-body text-sm leading-relaxed">
                   {reason.description}
                 </p>
-              </div>
+              </motion.div>
             )
           })}
         </div>

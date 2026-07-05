@@ -1,6 +1,7 @@
 'use client'
 
 import { Scissors, Palette, Sparkles, Wind, Flower, Brush, Crown, Waves, Droplet } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function FeaturedServices() {
   const services = [
@@ -33,13 +34,22 @@ export default function FeaturedServices() {
           {services.map((service, index) => {
             const Icon = service.icon
             return (
-              <div
+              <motion.div
                 key={index}
-                className="group p-8 bg-background rounded-2xl border border-border hover:border-primary hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 duration-700"
-                style={{ animationDelay: `${index * 100}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -5, boxShadow: '0 20px 25px -5rgba(0, 0, 0, 0.1)' }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group p-8 bg-background rounded-2xl border border-border hover:border-primary transition-all duration-300"
               >
                 <div className="mb-4 inline-flex p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                  <motion.div
+                    whileHover={{ scale: 1.15 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Icon className="w-6 h-6 text-primary" />
+                  </motion.div>
                 </div>
                 <h3 className="text-xl font-heading font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {service.name}
@@ -47,7 +57,7 @@ export default function FeaturedServices() {
                 <p className="text-muted-foreground font-body text-sm leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
             )
           })}
         </div>
