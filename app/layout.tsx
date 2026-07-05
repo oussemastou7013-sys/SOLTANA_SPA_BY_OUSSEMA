@@ -17,14 +17,12 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: 'Spa Sultana - Premium Beauty Salon in Bizerte, Tunisia',
   description: 'Luxury beauty salon offering professional skincare, spa treatments, bridal beauty, and premium beauty services in Bizerte, Tunisia.',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
 }
 
 export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
   colorScheme: 'light',
   themeColor: '#F5E6D3',
 }
