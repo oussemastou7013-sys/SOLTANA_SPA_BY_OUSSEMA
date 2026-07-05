@@ -60,7 +60,7 @@ export default function Gallery() {
       <section className="pt-32 pb-16 md:py-40 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Gallery
+            Galerie
           </h1>
           <p className="text-xl text-muted-foreground font-body max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
             Explorez l'élégance et le luxe de Spa Sultana
