@@ -6,16 +6,6 @@ import Footer from '@/components/footer'
 import FloatingWhatsApp from '@/components/floating-whatsapp'
 import { MapPin, Phone, MessageCircle, Clock } from 'lucide-react'
 
-function InstagramIcon({ size = 24 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  )
-}
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -34,6 +24,8 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    // In a real application, you would send this data to a server
+    console.log('Form submitted:', formData)
     setSubmitted(true)
     setTimeout(() => {
       setFormData({ name: '', email: '', phone: '', service: '', message: '' })
@@ -45,22 +37,26 @@ export default function Contact() {
     <main className="overflow-x-hidden">
       <Navigation />
 
+      {/* Hero Section */}
       <section className="pt-32 pb-16 md:py-40 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Contactez-Nous
+            Contact Us
           </h1>
           <p className="text-xl text-muted-foreground font-body max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Prenez contact avec Spa Sultana pour reserver votre rendez-vous ou poser vos questions
+            Get in touch with Spa Sultana to book your appointment or ask any questions
           </p>
         </div>
       </section>
 
+      {/* Contact Section */}
       <section className="py-20 md:py-32 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+            {/* Contact Information */}
             <div className="lg:col-span-1 space-y-8">
-              <div>
+              {/* Address */}
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700">
                 <div className="flex gap-4 mb-4">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10">
@@ -68,16 +64,17 @@ export default function Contact() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-foreground">Adresse</h3>
+                    <h3 className="text-lg font-heading font-bold text-foreground">Address</h3>
                     <p className="text-muted-foreground font-body mt-2">
                       7VG6+3RQ<br />
-                      Bizerte, Tunisie
+                      Bizerte, Tunisia
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div>
+              {/* Phone */}
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700" style={{ animationDelay: '100ms' }}>
                 <div className="flex gap-4 mb-4">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10">
@@ -85,15 +82,16 @@ export default function Contact() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-foreground">Telephone</h3>
+                    <h3 className="text-lg font-heading font-bold text-foreground">Phone</h3>
                     <a href="tel:+21655720810" className="text-primary font-body hover:underline">
-                      55 720 810
+                      +216 55 720 810
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div>
+              {/* WhatsApp */}
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700" style={{ animationDelay: '200ms' }}>
                 <div className="flex gap-4 mb-4">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-green-100">
@@ -102,40 +100,20 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-heading font-bold text-foreground">WhatsApp</h3>
-                    <a
-                      href="https://wa.me/21655720810"
-                      target="_blank"
+                    <a 
+                      href="https://wa.me/21655720810" 
+                      target="_blank" 
                       rel="noopener noreferrer"
                       className="text-primary font-body hover:underline"
                     >
-                      55 720 810
+                      +216 55 720 810
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <div className="flex gap-4 mb-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-pink-100 text-pink-600">
-                      <InstagramIcon size={24} />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-heading font-bold text-foreground">Instagram</h3>
-                    <a
-                      href="https://www.instagram.com/spa_sultana"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary font-body hover:underline"
-                    >
-                      @spa_sultana
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div>
+              {/* Business Hours */}
+              <div className="animate-in fade-in slide-in-from-left-8 duration-700" style={{ animationDelay: '300ms' }}>
                 <div className="flex gap-4 mb-4">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10">
@@ -143,32 +121,34 @@ export default function Contact() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-foreground">Horaires</h3>
+                    <h3 className="text-lg font-heading font-bold text-foreground">Business Hours</h3>
                     <p className="text-muted-foreground font-body mt-2">
-                      Lundi - Dimanche<br />
-                      9h00 - 20h00
+                      Monday - Sunday<br />
+                      9:00 AM - 8:00 PM
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-2">
+            {/* Contact Form */}
+            <div className="lg:col-span-2 animate-in fade-in slide-in-from-right-8 duration-700">
               <div className="bg-background rounded-2xl p-8 border border-border">
                 <h2 className="text-2xl font-heading font-bold text-foreground mb-6">
-                  Prendre Rendez-vous
+                  Book Your Appointment
                 </h2>
 
                 {submitted && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                    Merci ! Nous avons bien recu votre message et vous recontacterons rapidement.
+                    Thank you! We&apos;ve received your message and will contact you soon.
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name */}
                   <div>
                     <label className="block text-sm font-body font-semibold text-foreground mb-2">
-                      Nom Complet
+                      Full Name
                     </label>
                     <input
                       type="text"
@@ -176,11 +156,12 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body bg-background"
-                      placeholder="Votre nom"
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body"
+                      placeholder="Your name"
                     />
                   </div>
 
+                  {/* Email */}
                   <div>
                     <label className="block text-sm font-body font-semibold text-foreground mb-2">
                       Email
@@ -191,14 +172,15 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body bg-background"
-                      placeholder="votre@email.com"
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body"
+                      placeholder="your@email.com"
                     />
                   </div>
 
+                  {/* Phone */}
                   <div>
                     <label className="block text-sm font-body font-semibold text-foreground mb-2">
-                      Numero de Telephone
+                      Phone Number
                     </label>
                     <input
                       type="tel"
@@ -206,11 +188,12 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body bg-background"
-                      placeholder="55 123 456"
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body"
+                      placeholder="+216 55 123 456"
                     />
                   </div>
 
+                  {/* Service */}
                   <div>
                     <label className="block text-sm font-body font-semibold text-foreground mb-2">
                       Service
@@ -220,22 +203,22 @@ export default function Contact() {
                       value={formData.service}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body bg-background"
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body"
                     >
-                      <option value="">Choisissez un service</option>
-                      <option value="Coiffure">Coiffure & Brushing</option>
-                      <option value="Lella Beya">Lella Beya / Hammam</option>
-                      <option value="Soins Mains Pieds">Soins Mains & Pieds</option>
-                      <option value="Epilation">Epilation Halawa & Cire</option>
+                      <option value="">Select a service</option>
+                      <option value="Hair Styling">Hair Styling</option>
+                      <option value="Hair Coloring">Hair Coloring</option>
+                      <option value="Makeup">Makeup</option>
+                      <option value="Facial Care">Facial Care</option>
+                      <option value="Skincare">Skincare</option>
+                      <option value="Nail Care">Nail Care</option>
+                      <option value="Bridal Beauty">Bridal Beauty</option>
                       <option value="Massage">Massage</option>
-                      <option value="Head Spa">Head Spa</option>
-                      <option value="Rituel Imperial">Rituel Imperial</option>
-                      <option value="Rituel Sultan">Rituel Sultan</option>
-                      <option value="Rituel Arabesque">Rituel Arabesque</option>
-                      <option value="Rituel Cinderella">Rituel Cinderella</option>
+                      <option value="Spa Treatments">Spa Treatments</option>
                     </select>
                   </div>
 
+                  {/* Message */}
                   <div>
                     <label className="block text-sm font-body font-semibold text-foreground mb-2">
                       Message
@@ -245,28 +228,30 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body bg-background"
-                      placeholder="Dites-nous vos preferences pour le rendez-vous..."
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-body"
+                      placeholder="Tell us about your appointment preferences..."
                     ></textarea>
                   </div>
 
+                  {/* Submit Button */}
                   <button
                     type="submit"
                     className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-opacity-90 transition-all duration-300 font-body font-semibold"
                   >
-                    Envoyer
+                    Send Message
                   </button>
                 </form>
               </div>
             </div>
           </div>
 
-          <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border border-border">
+          {/* Map Placeholder */}
+          <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border border-border animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="w-full h-96 bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                 <p className="text-lg font-heading font-bold text-foreground mb-2">
-                  Situee a Bizerte, Tunisie
+                  Located in Bizerte, Tunisia
                 </p>
                 <p className="text-muted-foreground font-body">
                   7VG6+3RQ, Bizerte
