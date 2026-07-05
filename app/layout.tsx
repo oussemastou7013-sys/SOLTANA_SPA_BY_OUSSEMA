@@ -15,8 +15,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Spa Sultana - Premium Beauty Salon in Bizerte, Tunisia',
-  description: 'Luxury beauty salon offering professional skincare, spa treatments, bridal beauty, and premium beauty services in Bizerte, Tunisia.',
+  title: 'Spa Sultana - Salon de Beauté Premium à Bizerte, Tunisie',
+  description: 'Salon de beauté de luxe offrant des soins professionnels, des traitements spa, la beauté de mariée et des services beauté premium à Bizerte, Tunisie.',
 }
 
 export const viewport: Viewport = {
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${lato.variable} scroll-smooth`}>
+    <html lang="fr" className={`${playfairDisplay.variable} ${lato.variable} scroll-smooth`}>
       <body className="font-body antialiased bg-background text-foreground">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

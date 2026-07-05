@@ -12,19 +12,19 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-heading font-bold mb-4">Spa Sultana</h3>
             <p className="font-body text-background/80 leading-relaxed">
-              Premium beauty salon in Bizerte, Tunisia. Experience luxury, elegance, and professional care.
+              Salon de beauté premium à Bizerte, Tunisie. Expérience du luxe, de l'élégance et des soins professionnels.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-bold mb-4 text-lg">Quick Links</h4>
+            <h4 className="font-heading font-bold mb-4 text-lg">Liens Rapides</h4>
             <ul className="space-y-2">
               {[
-                { href: '/', label: 'Home' },
-                { href: '/about', label: 'About' },
+                { href: '/', label: 'Accueil' },
+                { href: '/about', label: 'À Propos' },
                 { href: '/services', label: 'Services' },
-                { href: '/gallery', label: 'Gallery' },
+                { href: '/gallery', label: 'Galerie' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="font-body text-background/80 hover:text-background transition-colors">
@@ -40,12 +40,12 @@ export default function Footer() {
             <h4 className="font-heading font-bold mb-4 text-lg">Services</h4>
             <ul className="space-y-2">
               {[
-                'Hair Styling',
-                'Skincare & Facials',
-                'Makeup',
-                'Nail Care',
+                'Coiffure',
+                'Soins & Facials',
+                'Maquillage',
+                'Soins des Ongles',
                 'Massage & Spa',
-                'Bridal Beauty',
+                'Beauté de Mariée',
               ].map((service) => (
                 <li key={service}>
                   <span className="font-body text-background/80">{service}</span>
@@ -56,12 +56,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-bold mb-4 text-lg">Contact Info</h4>
+            <h4 className="font-heading font-bold mb-4 text-lg">Informations de Contact</h4>
             <div className="space-y-3">
               <div className="flex gap-3">
                 <MapPin size={20} className="flex-shrink-0 mt-0.5" />
                 <span className="font-body text-background/80">
-                  7VG6+3RQ, Bizerte, Tunisia
+                  7VG6+3RQ, Bizerte, Tunisie
                 </span>
               </div>
               <div className="flex gap-3">
@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-background/20 pt-8">
           <p className="text-center font-body text-background/60">
-            © 2025 Spa Sultana. All rights reserved. Premium beauty salon in Bizerte, Tunisia.
+            © 2025 Spa Sultana. Tous droits réservés. Salon de beauté premium à Bizerte, Tunisie.
           </p>
         </div>
       </div>

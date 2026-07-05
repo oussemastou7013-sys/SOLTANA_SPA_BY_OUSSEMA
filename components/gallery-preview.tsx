@@ -17,10 +17,10 @@ export default function GalleryPreview() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Gallery
+            Galerie
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Explore the elegance and luxury of our premium beauty sanctuary
+            Explorez l'élégance et le luxe de notre sanctuary beauté premium
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function GalleryPreview() {
             href="/gallery"
             className="px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 font-body font-semibold shadow-lg"
           >
-            View Full Gallery
+            Voir la Galerie Complète
           </Link>
         </div>
       </div>

@@ -6,23 +6,23 @@ export default function WhyChooseUs() {
   const reasons = [
     {
       icon: Sparkles,
-      title: 'Premium Luxury',
-      description: 'Experience unparalleled elegance with premium treatments in our exquisite sanctuary.',
+      title: 'Luxe Premium',
+      description: 'Expérience d\'une élégance incomparable avec des soins premium dans notre sanctuary exquis.',
     },
     {
       icon: Award,
-      title: 'Expert Professionals',
-      description: 'Our highly trained beauty experts bring decades of expertise to every service.',
+      title: 'Professionnels Experts',
+      description: 'Nos expertes beauté hautement qualifiées apportent des décennies d\'expertise à chaque service.',
     },
     {
       icon: Users,
-      title: 'Personalized Care',
-      description: 'Customized treatments tailored to your unique beauty and wellness needs.',
+      title: 'Soins Personnalisés',
+      description: 'Traitements adaptés à vos besoins uniques de beauté et de bien-être.',
     },
     {
       icon: Heart,
-      title: 'Wellness Focused',
-      description: 'Holistic approach to beauty that nurtures both body and soul.',
+      title: 'Bien-être Holistique',
+      description: 'Approche holistique de la beauté qui nourrit le corps et l\'âme.',
     },
   ]
 
@@ -32,10 +32,10 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Why Choose Spa Sultana
+            Pourquoi Choisir Spa Sultana
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Discover the perfect blend of luxury, expertise, and wellness in the heart of Bizerte
+            Découvrez le mélange parfait du luxe, de l'expertise et du bien-être au cœur de Bizerte
           </p>
         </div>
 

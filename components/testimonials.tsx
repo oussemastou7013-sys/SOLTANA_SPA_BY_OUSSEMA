@@ -6,20 +6,20 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: 'Fatima Al-Masri',
-      role: 'Bride',
-      content: 'Spa Sultana made my wedding day truly special. The bridal package was absolutely flawless.',
+      role: 'Mariée',
+      content: 'Spa Sultana a rendu mon jour de mariage vraiment spécial. Le package mariée était absolument impeccable.',
       rating: 5,
     },
     {
       name: 'Amira Ben Ali',
-      role: 'Regular Client',
-      content: 'The attention to detail and professional care at Spa Sultana is unmatched. I feel renewed every visit.',
+      role: 'Cliente Régulière',
+      content: 'L\'attention aux détails et la qualité professionnelle chez Spa Sultana sont incomparables. Je me sens revigorée à chaque visite.',
       rating: 5,
     },
     {
       name: 'Leila Hafiz',
-      role: 'Corporate Client',
-      content: 'Luxurious, elegant, and incredibly relaxing. The perfect escape from daily stress.',
+      role: 'Cliente Entreprise',
+      content: 'Luxueux, élégant et incroyablement relaxant. La fuite parfaite du stress quotidien.',
       rating: 5,
     },
   ]
@@ -30,10 +30,10 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Client Testimonials
+            Avis de nos Clients
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Hear from our valued clients who have experienced the Spa Sultana difference
+            Découvrez les témoignages de nos clients précieux qui ont expérimenté la différence Spa Sultana
           </p>
         </div>
 

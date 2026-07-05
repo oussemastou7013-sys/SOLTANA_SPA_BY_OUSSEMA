@@ -4,15 +4,15 @@ import { Scissors, Palette, Sparkles, Wind, Flower, Brush, Crown, Waves, Droplet
 
 export default function FeaturedServices() {
   const services = [
-    { icon: Scissors, name: 'Hair Styling', description: 'Expert cuts and styling for every occasion' },
-    { icon: Palette, name: 'Hair Coloring', description: 'Professional coloring with premium products' },
-    { icon: Brush, name: 'Makeup', description: 'Bridal & event makeup by expert artists' },
-    { icon: Sparkles, name: 'Facial Care', description: 'Rejuvenating facials tailored to your skin' },
-    { icon: Droplet, name: 'Skincare', description: 'Advanced skincare treatments for radiance' },
-    { icon: Wind, name: 'Nail Care', description: 'Manicure & pedicure with luxe finishes' },
-    { icon: Crown, name: 'Bridal Beauty', description: 'Complete bridal packages for your special day' },
-    { icon: Waves, name: 'Massage', description: 'Therapeutic massages for ultimate relaxation' },
-    { icon: Flower, name: 'Spa Treatments', description: 'Holistic spa experiences & wellness' },
+    { icon: Scissors, name: 'Coiffure', description: 'Coupes et coiffages experts pour chaque occasion' },
+    { icon: Palette, name: 'Coloration', description: 'Coloration professionnelle avec produits premium' },
+    { icon: Brush, name: 'Maquillage', description: 'Maquillage de mariage et d\'événement par nos artistes' },
+    { icon: Sparkles, name: 'Soins du Visage', description: 'Soins rajeunissants adaptés à votre peau' },
+    { icon: Droplet, name: 'Soins Dermatologiques', description: 'Traitements avancés pour une radiance durable' },
+    { icon: Wind, name: 'Soins des Ongles', description: 'Manucure & pédicure avec finitions luxueuses' },
+    { icon: Crown, name: 'Beauté de Mariée', description: 'Packages complets pour votre jour spécial' },
+    { icon: Waves, name: 'Massage', description: 'Massages thérapeutiques pour la détente ultime' },
+    { icon: Flower, name: 'Soins Spa', description: 'Expériences spa holistiques & bien-être' },
   ]
 
   return (
@@ -21,10 +21,10 @@ export default function FeaturedServices() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Our Premium Services
+            Nos Services Premium
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Comprehensive beauty and wellness treatments for every need
+            Traitements beauté et bien-être complets pour chaque besoin
           </p>
         </div>
 

@@ -24,10 +24,10 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight text-balance">
-              Timeless Elegance
+              Élégance Intemporelle
             </h1>
             <p className="text-lg md:text-xl text-gray-100 mb-8 font-body font-light leading-relaxed max-w-xl">
-              Experience the ultimate sanctuary of beauty and wellness. Indulge in premium treatments designed to enhance your natural radiance.
+              Découvrez le sanctuary ultime de la beauté et du bien-être. Offrez-vous des soins premium conçus pour sublimer votre beauté naturelle.
             </p>
 
             {/* CTA Buttons */}
@@ -36,7 +36,7 @@ export default function Hero() {
                 href="/contact"
                 className="px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 font-body font-semibold text-center shadow-lg"
               >
-                Book Appointment
+                Prendre Rendez-Vous
               </Link>
               <a
                 href="https://wa.me/21655720810"
