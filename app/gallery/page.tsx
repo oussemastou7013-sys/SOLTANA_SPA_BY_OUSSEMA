@@ -63,7 +63,7 @@ export default function Gallery() {
             Gallery
           </h1>
           <p className="text-xl text-muted-foreground font-body max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Explore the elegance and luxury of Spa Sultana
+            Explorez l'élégance et le luxe de Spa Sultana
           </p>
         </div>
       </section>
