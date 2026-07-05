@@ -248,13 +248,12 @@ export default function Contact() {
           {/* Map Container */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border border-border animate-in fade-in slide-in-from-bottom-8 duration-700">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.7532489024737!2d10.1914!3d37.2808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd8f8f8f8f8f8f%3A0x7VG6%2B3RQ!2sSpa%20Sultana!5e0!3m2!1sfr!2stn!4v1704000000000"
+              src="https://www.google.com/maps?q=7VG6+3RQ,+Bizerte,+Tunisia&z=18&output=embed"
               width="100%"
-              height="384"
-              style={{ border: 'none', borderRadius: '1rem' }}
-              allowFullScreen=""
+              height="300"
+              style={{ border: 'none' }}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             ></iframe>
           </div>
         </div>
