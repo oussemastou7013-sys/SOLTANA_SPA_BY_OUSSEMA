@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react'
+import { MapPin, Phone, Mail, MessageCircle, Heart, Navigation } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -74,6 +74,18 @@ export default function Footer() {
                 <MessageCircle size={20} className="flex-shrink-0 mt-0.5" />
                 <a href="https://wa.me/21655720810" target="_blank" rel="noopener noreferrer" className="font-body text-background/80 hover:text-background transition-colors">
                   WhatsApp
+                </a>
+              </div>
+              <div className="flex gap-3">
+                <Heart size={20} className="flex-shrink-0 mt-0.5" />
+                <a href="https://www.instagram.com/spa_sultana?igsh=MTdkd2NiM3huaGUyYQ==" target="_blank" rel="noopener noreferrer" className="font-body text-background/80 hover:text-background transition-colors">
+                  Instagram
+                </a>
+              </div>
+              <div className="flex gap-3">
+                <Navigation size={20} className="flex-shrink-0 mt-0.5" />
+                <a href="https://maps.google.com/?q=7VG6+3RQ,+Bizerte,+Tunisia" target="_blank" rel="noopener noreferrer" className="font-body text-background/80 hover:text-background transition-colors">
+                  Google Maps
                 </a>
               </div>
             </div>

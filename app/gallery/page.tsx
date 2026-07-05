@@ -11,44 +11,44 @@ export default function Gallery() {
 
   const gallery = [
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841307656-TVhWZmVmAneXVpdlcHI71tBg52JftY.jpg',
+      src: '/images/reception.jpg',
       alt: 'Luxury Reception Area',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841253632-SIarZdwv0byy4tcKCm6c169v3dQfsv.jpg',
-      alt: 'Elegant Entrance',
+      src: '/images/reception-desk.jpg',
+      alt: 'Elegant Reception Desk',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841393091-JVdkHjUSJUCIpSSvWLjPgEVp52a3p5.jpg',
-      alt: 'Spa Relaxation Area',
+      src: '/images/treatment-room-1.jpg',
+      alt: 'Spa Treatment Room',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841487641-MsqacQNhK0sMXA6CQhPvW8pAkeDxFg.jpg',
-      alt: 'Grand Entrance Door',
+      src: '/images/hammam.jpg',
+      alt: 'Moroccan Hammam',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841197681-aCxcWptqKvk0HmKUZ16eixEtYYLeMX.jpg',
-      alt: 'Storefront Display',
+      src: '/images/hair-salon.jpg',
+      alt: 'Hair Salon Area',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841340579-bwXuMlkxkpH6c169v3dQfsv.jpg',
-      alt: 'Decorative Details',
+      src: '/images/lounge-area.jpg',
+      alt: 'Luxury Lounge Area',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841272909-DWfZyYksjgTIgQOOyW7Jn8q8JxgjpQ.jpg',
+      src: '/images/treatment-room-2.jpg',
       alt: 'Treatment Room',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841145982-TY6VYjDhWgg0QnVjMYvhxMFlS62PA1.jpg',
-      alt: 'Mirror and Vanity',
+      src: '/images/massage-room.jpg',
+      alt: 'Massage Room',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841539404-eFz7HeZu4GxL4Cpr1ghTe9vrxnFjWd.jpg',
-      alt: 'Therapy Room',
+      src: '/images/hammam-2.jpg',
+      alt: 'Spa Hammam',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841467774-DKaUikLv9xhIzbN0jdCAKn2ikTglbZ.jpg',
-      alt: 'Ambiance Lighting',
+      src: '/images/spa-room.jpg',
+      alt: 'Spa Treatment Area',
     },
   ]
 

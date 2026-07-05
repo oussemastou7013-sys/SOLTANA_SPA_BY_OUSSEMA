@@ -28,7 +28,7 @@ export default function About() {
             {/* Image */}
             <div className="animate-in fade-in slide-in-from-left-8 duration-700">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841307656-TVhWZmVmAneXVpdlcHI71tBg52JftY.jpg"
+                src="/images/reception.jpg"
                 alt="Spa Sultana Interior"
                 className="rounded-2xl shadow-xl"
               />
@@ -96,7 +96,7 @@ export default function About() {
             {/* Image */}
             <div className="order-1 lg:order-2 animate-in fade-in slide-in-from-right-8 duration-700">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841253632-SIarZdwv0byy4tcKCm6c169v3dQfsv.jpg"
+                src="/images/reception-desk.jpg"
                 alt="Elegant Entrance"
                 className="rounded-2xl shadow-xl"
               />
@@ -119,12 +119,12 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841145982-TY6VYjDhWgg0QnVjMYvhxMFlS62PA1.jpg"
+              src="/images/treatment-room-1.jpg"
               alt="Premium Interior Design"
               className="rounded-2xl shadow-lg"
             />
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1782841272909-DWfZyYksjgTIgQOOyW7Jn8q8JxgjpQ.jpg"
+              src="/images/lounge-area.jpg"
               alt="Reception Area"
               className="rounded-2xl shadow-lg"
             />
