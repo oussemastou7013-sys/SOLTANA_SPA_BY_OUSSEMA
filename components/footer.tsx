@@ -84,7 +84,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-3">
                 <Navigation size={20} className="flex-shrink-0 mt-0.5" />
-                <a href="https://maps.google.com/?q=7VG6+3RQ,+Bizerte,+Tunisia" target="_blank" rel="noopener noreferrer" className="font-body text-background/80 hover:text-background transition-colors">
+                <a href="https://www.google.com/maps/search/?api=1&query=Spa%20Soltana%207VG6%2B3RQ%20Bizerte%20Tunisia" target="_blank" rel="noopener noreferrer" className="font-body text-background/80 hover:text-background transition-colors">
                   Google Maps
                 </a>
               </div>
