@@ -245,19 +245,17 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Map Placeholder */}
+          {/* Map Container */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border border-border animate-in fade-in slide-in-from-bottom-8 duration-700">
-            <div className="w-full h-96 bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-lg font-heading font-bold text-foreground mb-2">
-                  Situé à Bizerte, Tunisie
-                </p>
-                <p className="text-muted-foreground font-body">
-                  7VG6+3RQ, Bizerte
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.7532489024737!2d10.1914!3d37.2808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd8f8f8f8f8f8f%3A0x7VG6%2B3RQ!2sSpa%20Sultana!5e0!3m2!1sfr!2stn!4v1704000000000"
+              width="100%"
+              height="384"
+              style={{ border: 'none', borderRadius: '1rem' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
