@@ -1,53 +1,71 @@
 'use client'
 
 import { Sparkles, Award, Users, Heart } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 
 export default function WhyChooseUs() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    const elements = sectionRef.current?.querySelectorAll('.reveal')
+    elements?.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   const reasons = [
     {
       icon: Sparkles,
-      title: 'Premium Luxury',
-      description: 'Experience unparalleled elegance with premium treatments in our exquisite sanctuary.',
+      title: 'Luxe Premium',
+      description: 'Vivez une experience incomparable dans notre sanctuaire de beaute raffine et elegant.',
     },
     {
       icon: Award,
-      title: 'Expert Professionals',
-      description: 'Our highly trained beauty experts bring decades of expertise to every service.',
+      title: 'Professionnelles Expertes',
+      description: 'Nos estheticiennes qualifiees apportent leur savoir-faire a chaque soin.',
     },
     {
       icon: Users,
-      title: 'Personalized Care',
-      description: 'Customized treatments tailored to your unique beauty and wellness needs.',
+      title: 'Soins Personnalises',
+      description: 'Des soins sur-mesure adaptes a vos besoins uniques de beaute et bien-etre.',
     },
     {
       icon: Heart,
-      title: 'Wellness Focused',
-      description: 'Holistic approach to beauty that nurtures both body and soul.',
+      title: 'Bien-etre Global',
+      description: 'Une approche holistique de la beaute qui nourrit le corps et l\'esprit.',
     },
   ]
 
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="py-20 md:py-32 bg-background" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
+        <div className="text-center mb-16 reveal">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Why Choose Spa Sultana
+            Pourquoi Choisir Spa Sultana
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Discover the perfect blend of luxury, expertise, and wellness in the heart of Bizerte
+            Decouvrez l&apos;alliance parfaite du luxe, de l&apos;expertise et du bien-etre au coeur de Bizerte
           </p>
         </div>
 
-        {/* Reasons Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon
             return (
               <div
                 key={index}
-                className="group p-8 bg-card rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-8 duration-700"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="reveal group p-8 bg-card rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="mb-4 inline-flex p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                   <Icon className="w-6 h-6 text-primary" />

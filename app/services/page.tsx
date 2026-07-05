@@ -1,140 +1,216 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import FloatingWhatsApp from '@/components/floating-whatsapp'
-import { Scissors, Palette, Sparkles, Wind, Flower, Brush, Crown, Waves, Droplet } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Services() {
-  const services = [
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.05 }
+    )
+
+    const elements = sectionRef.current?.querySelectorAll('.reveal')
+    elements?.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
+  const serviceCategories = [
     {
-      icon: Scissors,
-      name: 'Hair Styling',
-      description: 'Expert cuts and styling for every occasion. From everyday elegance to special event preparation, our master stylists create looks that perfectly complement your features.',
-      features: ['Professional cutting', 'Styling consultation', 'Event preparation'],
+      title: 'Coiffure',
+      items: [
+        'Brushing cheveux court',
+        'Brushing cheveux mi-long',
+        'Brushing cheveux long',
+        'Brushing cheveux extra long',
+        'Shampooing + soins cheveux',
+        'Epilation sourcils + teinture',
+      ],
     },
     {
-      icon: Palette,
-      name: 'Hair Coloring',
-      description: 'Professional coloring with premium products. Achieve your desired look with our advanced coloring techniques, from bold transformations to subtle highlights.',
-      features: ['Color consultation', 'Permanent color', 'Highlights & balayage', 'Toning'],
+      title: 'Lella Beya',
+      items: [
+        'Hammam marocain',
+        'Enveloppement',
+        'Masque',
+        'Massage humide 15 min',
+      ],
     },
     {
-      icon: Brush,
-      name: 'Makeup',
-      description: 'Bridal & event makeup by expert artists. We create stunning looks that last throughout your special moments.',
-      features: ['Bridal makeup', 'Event makeup', 'Special occasion', 'Makeup lessons'],
+      title: 'Soins Mains & Pieds',
+      items: [
+        'Vernis classique',
+        'Depose vernis permanent',
+        'Vernis permanent',
+        'Manucure complete',
+        'Pedicure complete',
+      ],
     },
     {
-      icon: Sparkles,
-      name: 'Facial Care',
-      description: 'Rejuvenating facials tailored to your skin type. Treat your complexion to professional care that reveals radiant, healthy skin.',
-      features: ['Deep cleansing', 'Hydrating facials', 'Anti-aging treatments', 'Custom facials'],
+      title: 'Epilation Halawa & Cire',
+      items: [
+        'Demi jambes',
+        'Jambes completes',
+        'Bras',
+        'Aisselles',
+        'Visage',
+        'Dos',
+        'Ventre',
+        'Maillot simple',
+        'Maillot integral',
+        'Corps complet',
+      ],
     },
     {
-      icon: Droplet,
-      name: 'Skincare',
-      description: 'Advanced skincare treatments for lasting radiance. Our comprehensive skincare programs address all your beauty concerns.',
-      features: ['Acne treatment', 'Sensitive skin care', 'Anti-aging', 'Brightening'],
+      title: 'Massage',
+      items: [
+        'Massage 20 min',
+        'Massage 30 min',
+        'Massage 40 min',
+        'Massage 1h',
+        'Douche apres epilation',
+        'Pierres chaudes',
+      ],
     },
     {
-      icon: Wind,
-      name: 'Nail Care',
-      description: 'Manicure & pedicure with luxe finishes. Enjoy beautifully manicured nails with our premium nail care services.',
-      features: ['Classic manicure', 'Gel nails', 'Pedicure', 'Nail art'],
+      title: 'Head Spa',
+      items: [
+        'Head Spa 40 min',
+        'Head Spa 60 min',
+        'Step 1 : Nettoyage visage / cou / epaules + masque detox',
+        'Step 2 : Massage cranien + brushing',
+        'Step 3 : Soins cheveux + massage',
+      ],
     },
     {
-      icon: Crown,
-      name: 'Bridal Beauty',
-      description: 'Complete bridal packages for your special day. From consultation to the big day, we ensure you look absolutely radiant.',
-      features: ['Pre-wedding treatments', 'Bridal makeup', 'Hair styling', 'Complete packages'],
+      title: 'Rituel Imperial',
+      items: [
+        'Hammam marocain',
+        'Gommage corps complet au savon noir',
+        'Enveloppement au ghassoul',
+        'Masque visage',
+        'Massage relaxant corps complet 30 min',
+        'Brushing',
+        'The & patisseries orientales',
+      ],
     },
     {
-      icon: Waves,
-      name: 'Massage',
-      description: 'Therapeutic massages for ultimate relaxation. Release tension and rejuvenate your body with our expert massage therapists.',
-      features: ['Swedish massage', 'Deep tissue', 'Aromatherapy', 'Couples massage'],
+      title: 'Rituel Sultan',
+      items: [
+        'Hammam marocain',
+        'Gommage corps complet',
+        'Enveloppement',
+        'Masque visage detox',
+        'Massage relaxant 20 min',
+        'Head Spa Step 1 & 2',
+        'The a la menthe & douceurs',
+      ],
     },
     {
-      icon: Flower,
-      name: 'Spa Treatments',
-      description: 'Holistic spa experiences & wellness. Indulge in luxurious spa treatments that nurture both body and soul.',
-      features: ['Body treatments', 'Wellness packages', 'Relaxation therapy', 'Holistic care'],
+      title: 'Rituel Arabesque',
+      items: [
+        'Hammam marocain',
+        'Gommage traditionnel savon noir & kessa',
+        'Enveloppement au ghassoul & huile d\'argan',
+        'Masque visage purifiant',
+        'Massage aux huiles essentielles 40 min',
+        'Soin capillaire + brushing',
+        'The & patisseries maison',
+      ],
+    },
+    {
+      title: 'Rituel Cinderella',
+      items: [
+        'Bain de lait hydratant',
+        'Gommage doux corps entier',
+        'Enveloppement nourrissant',
+        'Masque visage eclat',
+        'Massage princesse 30 min',
+        'Soin mains & pieds',
+        'Brushing & coiffage',
+        'Boisson detox & gourmandises',
+      ],
     },
   ]
 
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden" ref={sectionRef}>
       <Navigation />
 
-      {/* Hero Section */}
       <section className="pt-32 pb-16 md:py-40 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Our Premium Services
+            Nos Services
           </h1>
           <p className="text-xl text-muted-foreground font-body max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Comprehensive beauty and wellness treatments designed to enhance your natural beauty
+            Des soins de beaute et de bien-etre complets pour sublimer votre beaute naturelle
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
       <section className="py-20 md:py-32 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <div
-                  key={index}
-                  className="group p-8 bg-background rounded-2xl border border-border hover:border-primary hover:shadow-xl transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 duration-700"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="mb-4 inline-flex p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
-                  </div>
+            {serviceCategories.map((category, index) => (
+              <div
+                key={index}
+                className="reveal group p-8 bg-background rounded-2xl border border-border hover:border-primary hover:shadow-xl transition-all duration-300"
+                style={{ transitionDelay: `${index * 60}ms` }}
+              >
+                <h3 className="text-2xl font-heading font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  {category.title}
+                </h3>
 
-                  <h3 className="text-2xl font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {service.name}
-                  </h3>
-
-                  <p className="text-muted-foreground font-body mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-2">
-                    {service.features.map((feature, i) => (
-                      <div key={i} className="flex gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-foreground font-body">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
+                <ul className="space-y-2">
+                  {category.items.map((item, i) => (
+                    <li key={i} className="flex gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-muted-foreground font-body">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 md:py-32 bg-gradient-to-r from-primary to-accent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Book Your Treatment Today
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
+            Reservez Votre Soin
           </h2>
-          <p className="text-lg text-white/90 font-body mb-8 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Experience the ultimate in luxury beauty treatments. Contact us now to schedule your appointment.
+          <p className="text-lg text-white/90 font-body mb-8 max-w-2xl mx-auto">
+            Offrez-vous un moment de detente et de beaute. Contactez-nous pour planifier votre rendez-vous.
           </p>
 
-          <Link
-            href="/contact"
-            className="inline-block px-8 py-4 bg-white text-primary rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-body font-semibold shadow-lg"
-          >
-            Schedule Appointment
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-white text-primary rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-body font-semibold shadow-lg"
+            >
+              Prendre Rendez-vous
+            </Link>
+            <a
+              href="https://wa.me/21655720810"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 font-body font-semibold"
+            >
+              Ecrire sur WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
