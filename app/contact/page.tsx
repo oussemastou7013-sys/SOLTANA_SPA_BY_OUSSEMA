@@ -248,7 +248,7 @@ export default function Contact() {
           {/* Map Container */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border border-border animate-in fade-in slide-in-from-bottom-8 duration-700">
             <iframe
-              src="https://www.google.com/maps?q=7VG6+3RQ,+Bizerte,+Tunisia&z=18&output=embed"
+              src="https://www.google.com/maps?&q=Spa+Soltana+7VG6+3RQ+Bizerte&output=embed"
               width="100%"
               height="300"
               style={{ border: 'none' }}
