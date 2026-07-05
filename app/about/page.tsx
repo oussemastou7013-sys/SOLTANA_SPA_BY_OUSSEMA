@@ -13,10 +13,10 @@ export default function About() {
       <section className="pt-32 pb-16 md:py-40 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            About Spa Sultana
+            À Propos de Spa Sultana
           </h1>
           <p className="text-xl text-muted-foreground font-body max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Your premier destination for luxury beauty and wellness in Bizerte, Tunisia
+            Votre destination premium pour la beauté et le bien-être de luxe à Bizerte, Tunisie
           </p>
         </div>
       </section>
@@ -37,16 +37,16 @@ export default function About() {
             {/* Content */}
             <div className="animate-in fade-in slide-in-from-right-8 duration-700">
               <h2 className="text-4xl font-heading font-bold text-foreground mb-6">
-                Our Story
+                Notre Histoire
               </h2>
               <p className="text-lg text-muted-foreground font-body mb-6 leading-relaxed">
-                Spa Sultana was founded with a vision to bring world-class luxury beauty and wellness services to Bizerte. We believe that every client deserves to feel pampered, rejuvenated, and celebrated.
+                Spa Sultana a été fondé avec une vision : apporter des services de beauté et de bien-être de luxe de classe mondiale à Bizerte. Nous croyons que chaque client mérite de se sentir choyé, rajeuni et célébré.
               </p>
               <p className="text-lg text-muted-foreground font-body mb-6 leading-relaxed">
-                Our elegant sanctuary combines timeless Islamic architecture with modern beauty treatments, creating an atmosphere of ultimate tranquility and refinement.
+                Notre sanctuary élégant combine l'architecture islamique intemporelle avec les traitements beauté modernes, créant une atmosphère de tranquillité et de raffinement ultimes.
               </p>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                Each member of our team is dedicated to providing exceptional service, ensuring that every visit to Spa Sultana becomes a cherished memory.
+                Chaque membre de notre équipe s'engage à fournir un service exceptionnel, garantissant que chaque visite à Spa Sultana devient un souvenir précieux.
               </p>
             </div>
           </div>
@@ -60,35 +60,35 @@ export default function About() {
             {/* Content */}
             <div className="order-2 lg:order-1 animate-in fade-in slide-in-from-left-8 duration-700">
               <h2 className="text-4xl font-heading font-bold text-foreground mb-6">
-                Our Mission
+                Notre Mission
               </h2>
               <p className="text-lg text-muted-foreground font-body mb-6 leading-relaxed">
-                We are committed to delivering premium beauty and wellness services that enhance both outer beauty and inner wellness. Our mission is to create a sanctuary where every guest feels valued, pampered, and truly transformed.
+                Nous nous engageons à fournir des services de beauté et de bien-être premium qui améliorent à la fois la beauté extérieure et le bien-être intérieur. Notre mission est de créer un sanctuary où chaque invité se sent valorisé, choyé et véritablement transformé.
               </p>
               <div className="space-y-4">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   </div>
-                  <p className="text-muted-foreground font-body">Professional excellence in every treatment</p>
+                  <p className="text-muted-foreground font-body">Excellence professionnelle dans chaque traitement</p>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   </div>
-                  <p className="text-muted-foreground font-body">Luxury atmosphere and premium care</p>
+                  <p className="text-muted-foreground font-body">Atmosphère luxueuse et soins premium</p>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   </div>
-                  <p className="text-muted-foreground font-body">Personalized wellness journeys</p>
+                  <p className="text-muted-foreground font-body">Parcours de bien-être personnalisés</p>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   </div>
-                  <p className="text-muted-foreground font-body">Lasting client relationships</p>
+                  <p className="text-muted-foreground font-body">Relations durables avec les clients</p>
                 </div>
               </div>
             </div>
@@ -110,10 +110,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-heading font-bold text-foreground mb-6">
-              Our Luxury Atmosphere
+              Notre Atmosphère Luxueuse
             </h2>
             <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-              Designed for ultimate relaxation and rejuvenation
+              Conçue pour la détente et le rajeunissement ultimes
             </p>
           </div>
 
